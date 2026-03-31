@@ -194,5 +194,30 @@
     ],
     "github": "https://github.com/AshishSiwach",
     "live": ""
-  }
+  },
+  {
+  "title": "Polyglot Persistence Analytics — Walmart UK",
+  "category": "Data Engineering & Analytics",
+  "emoji": "🛒",
+  "featured": false,
+  "filters": [
+    "viz",
+    "de"
+  ],
+  "description": "Production-grade polyglot persistence system combining SQL Server (transactional data) and MongoDB (sentiment data) to address Walmart UK's customer churn problem. Built cross-database analytics using shared ProductID/CustomerID keys, a product performance matrix (revenue vs satisfaction), and real-time KPI dashboard. Sentiment analysis (correlation 0.73) identified at-risk products 2–3 weeks before revenue impact.",
+  "metric": "",
+  "tags": [
+    "Python",
+    "SQL Server",
+    "MongoDB",
+    "Dash",
+    "Plotly",
+    "Polyglot Persistence",
+    "Sentiment Analysis",
+    "pyodbc",
+    "pymongo"
+  ],
+  "github": "https://github.com/AshishSiwach/Polyglot_Persistence_DB_Analytics.git",
+  "live": ""
+}
 ]
