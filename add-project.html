@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Project — Ashish Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--bg:#060d1a;--surface:#0a1428;--border:rgba(15,131,192,0.15);--blue:#0F83C0;--blue2:#38a8e0;--t:#d4e8f7;--t2:#7090b0;--t3:#3a5570;--fi:'Inter',sans-serif;--fm:'Space Mono',monospace;}
+body{background:var(--bg);color:var(--t);font-family:var(--fi);min-height:100vh;padding:2rem;font-size:15px;}
+.wrap{max-width:680px;margin:0 auto;}
+h1{font-size:1.6rem;font-weight:800;color:#fff;margin-bottom:.3rem;}
+.sub{font-size:.85rem;color:var(--t2);margin-bottom:2rem;}
+.sub a{color:var(--blue2);text-decoration:none;}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.75rem;margin-bottom:1.5rem;}
+.card h2{font-size:.8rem;font-weight:700;font-family:var(--fm);letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:1.25rem;}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.ff{display:flex;flex-direction:column;gap:.3rem;margin-bottom:1rem;}
+.ff label{font-size:.65rem;font-weight:700;font-family:var(--fm);letter-spacing:.1em;text-transform:uppercase;color:var(--t3);}
+.ff input,.ff textarea,.ff select{background:var(--bg);border:1px solid var(--border);border-radius:5px;padding:.6rem .8rem;color:var(--t);font-family:var(--fi);font-size:.85rem;outline:none;resize:none;transition:border-color .15s;width:100%;}
+.ff input:focus,.ff textarea:focus,.ff select:focus{border-color:rgba(15,131,192,.4);}
+.ff input::placeholder,.ff textarea::placeholder{color:var(--t3);}
+.ff select option{background:#0a1428;}
+.hint{font-size:.7rem;color:var(--t3);margin-top:.2rem;}
+.checks{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:.3rem;}
+.chk{display:flex;align-items:center;gap:.35rem;font-size:.8rem;color:var(--t2);cursor:pointer;}
+.chk input{accent-color:var(--blue);width:14px;height:14px;}
+.btn{display:inline-flex;align-items:center;gap:.4rem;background:var(--blue);color:#fff;border:none;padding:.65rem 1.4rem;border-radius:6px;font-size:.82rem;font-weight:700;cursor:pointer;transition:all .15s;box-shadow:0 0 14px rgba(15,131,192,.3);}
+.btn:hover{background:var(--blue2);}
+.btn-copy{background:transparent;border:1px solid var(--border);color:var(--t2);box-shadow:none;margin-left:.5rem;}
+.btn-copy:hover{border-color:var(--blue);color:var(--blue2);background:rgba(15,131,192,.05);}
+.output-box{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.25rem;font-family:var(--fm);font-size:.72rem;color:var(--t2);line-height:1.7;white-space:pre-wrap;word-break:break-all;min-height:80px;margin-top:1rem;display:none;}
+.output-box.show{display:block;}
+.success{color:#4ade80;font-size:.8rem;margin-top:.5rem;display:none;}
+.instructions{background:rgba(15,131,192,.05);border:1px solid var(--border);border-radius:8px;padding:1.1rem 1.25rem;margin-bottom:1.5rem;}
+.instructions h3{font-size:.75rem;font-family:var(--fm);letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:.65rem;}
+.instructions ol{padding-left:1.1rem;}
+.instructions li{font-size:.82rem;color:var(--t2);line-height:1.7;margin-bottom:.25rem;}
+.instructions li code{background:rgba(15,131,192,.1);color:var(--blue2);padding:0 4px;border-radius:3px;font-family:var(--fm);font-size:.75rem;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>➕ Add a Project</h1>
+  <p class="sub">Fill in the form → copy the JSON → paste into <a href="#" onclick="return false">projects.json</a> → push to GitHub → done.</p>
+
+  <div class="instructions">
+    <h3>How to use</h3>
+    <ol>
+      <li>Fill in all the fields below and click <strong>Generate JSON</strong></li>
+      <li>Click <strong>Copy</strong> to copy the generated entry</li>
+      <li>Open <code>projects.json</code> in your editor</li>
+      <li>Paste it as a new item inside the <code>[  ]</code> array (add a comma after the previous entry)</li>
+      <li>Save → push to GitHub → Vercel deploys automatically</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>Project Details</h2>
+    <div class="row">
+      <div class="ff">
+        <label>Project Title *</label>
+        <input type="text" id="title" placeholder="e.g. Customer Churn Prediction">
+      </div>
+      <div class="ff">
+        <label>Category *</label>
+        <input type="text" id="category" placeholder="e.g. Healthcare ML">
+      </div>
+    </div>
+    <div class="row">
+      <div class="ff">
+        <label>Emoji Icon</label>
+        <input type="text" id="emoji" placeholder="e.g. 🔮" maxlength="4">
+      </div>
+      <div class="ff">
+        <label>Key Metric</label>
+        <input type="text" id="metric" placeholder="e.g. AUC = 0.91 · 50k rows">
+        <span class="hint">Leave blank if none</span>
+      </div>
+    </div>
+    <div class="ff">
+      <label>Description *</label>
+      <textarea id="description" rows="3" placeholder="What you built, how you built it, what it proved..."></textarea>
+    </div>
+    <div class="row">
+      <div class="ff">
+        <label>GitHub URL</label>
+        <input type="url" id="github" placeholder="https://github.com/AshishSiwach/...">
+      </div>
+      <div class="ff">
+        <label>Live Demo URL</label>
+        <input type="url" id="live" placeholder="https://... (optional)">
+      </div>
+    </div>
+    <div class="ff">
+      <label>Tags (comma separated) *</label>
+      <input type="text" id="tags" placeholder="Python, XGBoost, Scikit-learn, EDA">
+    </div>
+    <div class="ff">
+      <label>Filters (select all that apply)</label>
+      <div class="checks">
+        <label class="chk"><input type="checkbox" value="ml"> ML / Stats</label>
+        <label class="chk"><input type="checkbox" value="nlp"> NLP / AI</label>
+        <label class="chk"><input type="checkbox" value="viz"> Visualisation</label>
+        <label class="chk"><input type="checkbox" value="marketing"> Marketing</label>
+        <label class="chk"><input type="checkbox" value="de"> Data Engineering</label>
+      </div>
+    </div>
+    <div class="ff">
+      <label>Featured project?</label>
+      <div class="checks">
+        <label class="chk"><input type="checkbox" id="featured"> Yes — show with blue top border (use for your best project only)</label>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:center;flex-wrap:wrap;gap:.5rem;">
+    <button class="btn" onclick="generate()">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      Generate JSON
+    </button>
+    <button class="btn btn-copy" id="copyBtn" onclick="copyJSON()" style="display:none">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      Copy
+    </button>
+  </div>
+
+  <div class="output-box" id="output"></div>
+  <div class="success" id="success">✓ Copied to clipboard — paste into projects.json</div>
+</div>
+
+<script>
+function generate(){
+  var title=document.getElementById('title').value.trim();
+  var category=document.getElementById('category').value.trim();
+  var emoji=document.getElementById('emoji').value.trim()||'📁';
+  var metric=document.getElementById('metric').value.trim();
+  var description=document.getElementById('description').value.trim();
+  var github=document.getElementById('github').value.trim();
+  var live=document.getElementById('live').value.trim();
+  var tagsRaw=document.getElementById('tags').value.trim();
+  var featured=document.getElementById('featured').checked;
+
+  if(!title||!category||!description||!tagsRaw){
+    alert('Please fill in Title, Category, Description, and Tags.');return;
+  }
+
+  var tags=tagsRaw.split(',').map(function(t){return t.trim();}).filter(Boolean);
+  var filters=[];
+  document.querySelectorAll('.checks input[type=checkbox]:not(#featured)').forEach(function(c){
+    if(c.checked)filters.push(c.value);
+  });
+
+  var obj={
+    title:title,
+    category:category,
+    emoji:emoji,
+    featured:featured,
+    filters:filters,
+    description:description,
+    metric:metric,
+    tags:tags,
+    github:github,
+    live:live
+  };
+
+  var json=JSON.stringify(obj,null,2);
+  var box=document.getElementById('output');
+  box.textContent=json;
+  box.classList.add('show');
+  document.getElementById('copyBtn').style.display='inline-flex';
+  document.getElementById('success').style.display='none';
+}
+
+function copyJSON(){
+  var text=document.getElementById('output').textContent;
+  navigator.clipboard.writeText(text).then(function(){
+    var s=document.getElementById('success');
+    s.style.display='block';
+    setTimeout(function(){s.style.display='none';},3000);
+  });
+}
+</script>
+</body>
+</html>

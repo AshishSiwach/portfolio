@@ -1,0 +1,223 @@
+[
+  {
+    "title": "UK EV Adoption Forecasting",
+    "category": "MSc Dissertation",
+    "emoji": "⚡",
+    "featured": true,
+    "filters": [
+      "ml"
+    ],
+    "description": "Benchmarked SARIMAX, Prophet, and LightGBM — SARIMAX achieved 15% WAPE vs 30% and 34% for alternatives. Granger causality testing identified consumer search interest as a statistically significant leading demand indicator. Produced 2035 scenario forecasts vs UK ZEV targets.",
+    "metric": "15% WAPE · SARIMAX best model",
+    "tags": [
+      "Python",
+      "SARIMAX",
+      "LightGBM",
+      "Granger Causality",
+      "Dash"
+    ],
+    "github": "https://github.com/AshishSiwach/Masters_Dissertation",
+    "live": "https://ev-adoption-analysisdashboard.onrender.com/"
+  },
+  {
+    "title": "ArXiv Research Paper Retrieval System",
+    "category": "NLP / Information Retrieval",
+    "emoji": "📚",
+    "featured": false,
+    "filters": [
+      "nlp"
+    ],
+    "description": "Semantic retrieval over 136,238 ArXiv papers using Sentence-Transformers (all-MiniLM-L6-v2) and cosine similarity. Exposed as a REST API (FastAPI) and containerised with Docker. Evaluated via title-only self-retrieval — correct paper surfaces in top 5 results 96% of the time across 136k candidates at 37ms latency.",
+    "metric": "Recall@5 = 0.96 · MRR = 0.92 · 37ms latency",
+    "tags": [
+      "Python",
+      "Sentence-Transformers",
+      "FastAPI",
+      "Docker",
+      "KeyBERT",
+      "NLP",
+      "Embeddings"
+    ],
+    "github": "https://github.com/AshishSiwach/Research-Paper-Recommender-System",
+    "live": ""
+  },
+  {
+    "title": "PIMA Diabetes Classification",
+    "category": "Healthcare ML",
+    "emoji": "🩺",
+    "featured": false,
+    "filters": [
+      "ml"
+    ],
+    "description": "Evaluated six algorithms — Random Forest achieved ROC-AUC 0.87 and F1 0.71 via RandomizedSearchCV. Addressed 35% class imbalance with Stratified K-Fold; extracted clinical feature importance (Glucose, BMI, Age).",
+    "metric": "ROC-AUC 0.87 · F1 = 0.71",
+    "tags": [
+      "Python",
+      "Scikit-learn",
+      "XGBoost",
+      "Random Forest",
+      "Cross-Validation"
+    ],
+    "github": "https://github.com/AshishSiwach/PIMA-Diabetes-Prediction",
+    "live": ""
+  },
+  {
+    "title": "CO₂ Emissions Regression",
+    "category": "Climate Analytics",
+    "emoji": "🌍",
+    "featured": false,
+    "filters": [
+      "ml"
+    ],
+    "description": "OLS regression (R²=0.951) analysing emissions drivers across G20 + Nordic nations 1990–2023. Proved renewable energy adoption and urbanisation significantly reduce emissions.",
+    "metric": "R² = 0.951 · 33 years data",
+    "tags": [
+      "Python",
+      "OLS Regression",
+      "Causal Inference",
+      "EDA"
+    ],
+    "github": "https://github.com/AshishSiwach/CO2-emisssions-analysis",
+    "live": ""
+  },
+  {
+    "title": "Airbnb Marketplace Analysis",
+    "category": "Marketing Analytics",
+    "emoji": "🏠",
+    "featured": false,
+    "filters": [
+      "marketing"
+    ],
+    "description": "Logistic regression on 3,400+ Airbnb observations validating a $25 coupon campaign (p<0.001). Defined ideal guest profiles and redirected host acquisition strategy based on causal evidence.",
+    "metric": "p < 0.001 · 3,400+ observations",
+    "tags": [
+      "R",
+      "Logistic Regression",
+      "A/B Testing",
+      "Attribution"
+    ],
+    "github": "https://github.com/AshishSiwach/Customer-Acquisition-Retention-Choice-Modelling",
+    "live": ""
+  },
+  {
+    "title": "BRT Marketing Mix Modelling",
+    "category": "Econometrics",
+    "emoji": "📊",
+    "featured": false,
+    "filters": [
+      "marketing"
+    ],
+    "description": "Log-log regression (Adj. R²=0.92) attributing revenue to media channels. Local channels proved 2.5× more efficient — recommended 23% budget reallocation to local digital.",
+    "metric": "Adj. R²=0.92 · 23% reallocation",
+    "tags": [
+      "R",
+      "MMM",
+      "Attribution Modelling",
+      "Budget Optimisation"
+    ],
+    "github": "https://github.com/AshishSiwach/Marketing_Mix_Modelling",
+    "live": ""
+  },
+  {
+    "title": "US Labor Market Dashboard",
+    "category": "Data Visualisation",
+    "emoji": "📈",
+    "featured": false,
+    "filters": [
+      "viz"
+    ],
+    "description": "Interactive Plotly/Dash dashboard visualising US unemployment trends, regional disparities, and participation rates across 2022–2024.",
+    "metric": "",
+    "tags": [
+      "Python",
+      "Plotly",
+      "Dash",
+      "Pandas"
+    ],
+    "github": "https://github.com/AshishSiwach/US-Labour-Market-Analytics-Dashboard-2022-2024",
+    "live": ""
+  },
+  {
+    "title": "Intel Smartwatch Segmentation",
+    "category": "Customer Behaviour",
+    "emoji": "⌚",
+    "featured": false,
+    "filters": [
+      "ml"
+    ],
+    "description": "Hierarchical clustering (Ward.D2) identifying 3 distinct customer personas for Intel wearables. GE Matrix and SWOT analysis for go-to-market strategy recommendations.",
+    "metric": "3 customer personas · Ward.D2",
+    "tags": [
+      "R",
+      "Clustering",
+      "Customer Behaviour",
+      "Strategy"
+    ],
+    "github": "https://github.com/AshishSiwach/Customer-Segmentation-Case-Study",
+    "live": ""
+  },
+  {
+    "title": "CodeX Marketing Analysis",
+    "category": "Power BI Dashboard",
+    "emoji": "🍺",
+    "featured": false,
+    "filters": [
+      "viz",
+      "marketing"
+    ],
+    "description": "Interactive Power BI dashboard for CodeX, a German beverage brand. Covers brand perception, competitor benchmarking, and campaign performance across regions.",
+    "metric": "",
+    "tags": [
+      "Power BI",
+      "Marketing Analytics",
+      "Dashboard"
+    ],
+    "github": "",
+    "live": "https://www.novypro.com/project/marketing-analysis-4"
+  },
+  {
+    "title": "Transportation Data Pipeline — Cabs",
+    "category": "Data Engineering",
+    "emoji": "🚕",
+    "featured": false,
+    "filters": [
+      "de"
+    ],
+    "description": "Built an end-to-end Databricks pipeline ingesting high-volume trip data from AWS S3 into analysis-ready datasets. Implemented medallion architecture (Bronze → Silver → Gold) to structure scalable data transformations. Designed incremental ingestion using Auto Loader for efficient processing of continuously arriving data, with data quality checks, schema handling, and metadata tracking for reliability and auditability.",
+    "metric": "",
+    "tags": [
+      "Python",
+      "PySpark",
+      "Databricks",
+      "AWS S3",
+      "Auto Loader",
+      "Medallion Architecture",
+      "Delta Lake"
+    ],
+    "github": "https://github.com/AshishSiwach",
+    "live": ""
+  },
+  {
+    "title": "Hybrid Search & Reranking System",
+    "category": "NLP / Information Retrieval",
+    "emoji": "🔍",
+    "featured": true,
+    "filters": [
+      "nlp"
+    ],
+    "description": "Production-grade retrieval pipeline combining BM25 lexical search, FAISS-powered dense semantic retrieval, RRF fusion, and cross-encoder reranking — evaluated on 20,000 MS MARCO queries (164k passages). Hybrid + Reranker achieved MAP@5=0.510 and Recall@10=91.4%, outperforming BM25 by 2×. Includes a live Streamlit demo (QueryLens) with Claude Haiku-generated answers.",
+    "metric": "MAP@5 = 0.510 · Recall@10 = 91.4% · 164k passages",
+    "tags": [
+      "Python",
+      "FAISS",
+      "BM25",
+      "Sentence-Transformers",
+      "Cross-Encoder",
+      "RRF",
+      "Streamlit",
+      "MS MARCO"
+    ],
+    "github": "https://github.com/AshishSiwach/Hybrid-Search-System",
+    "live": "https://ashishsiwach-querylens.streamlit.app"
+  }
+]
